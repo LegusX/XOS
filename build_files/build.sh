@@ -7,13 +7,36 @@ cp -avf "/ctx/system_files"/. /
 
 ### Install packages
 
-# Packages can be installed from any enabled yum repo on the image.
-# RPMfusion repos are available by default in ublue main images
-# List of rpmfusion packages can be found here:
-# https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/43/x86_64/repoview/index.html&protocol=https&redirect=1
+dnf copr enable avengemedia/dms
+dnf install \
+    niri \
+    dms \
+    xwayland-satellite \
+    ghostty \
+    dms-greeter \
+    quickshell-git \
+    dankcalendar \
+    dgop \
+    dsearch \
+    matugen \
+    qt6-multimedia \
+    firefox \
+    dolphin \
+    greetd \
+    zsh \
+    power-profiles-daemon
 
-# this installs a package from fedora repos
-dnf5 install -y tmux
+### Enable various system units
+systemctl --user add-wants niri.service dms
+systemctl enable greetd.service power-profiles-daemon.service
+
+### Create default account
+useradd --root=/ \
+        --create-home \
+        --home-dir /var/home/logan \
+        --groups wheel,greeter,video,audio,input \
+        --shell /usr/bin/zsh \
+        logan
 
 # Use a COPR Example:
 #
