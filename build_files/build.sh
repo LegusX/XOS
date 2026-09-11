@@ -25,13 +25,13 @@ dnf install -y \
     greetd \
     zsh
 
-dnf uninstall \
+dnf remove \
     sddm \
     waybar \
 
 ### Enable various system units
 systemctl --user add-wants niri.service dms
-systemctl enable greetd.service power-profiles-daemon.service
+systemctl enable greetd.service power-pruninstallofiles-daemon.service
 
 ### Create default account
 useradd --root=/ \
