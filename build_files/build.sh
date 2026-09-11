@@ -7,9 +7,9 @@ cp -avf "/ctx/system_files"/. /
 
 ### Install packages
 
-dnf copr enable avengemedia/dms
-dnf copr enable avengemedia/danklinux
-dnf copr enable scottames/ghostty
+dnf copr enable -y avengemedia/dms
+dnf copr enable -y avengemedia/danklinux
+dnf copr enable -y scottames/ghostty
 
 dnf install \
     dms \
@@ -21,11 +21,9 @@ dnf install \
     dsearch \
     matugen \
     qt6-qtmultimedia \
-    firefox \
     dolphin \
     greetd \
-    zsh \
-    power-profiles-daemon
+    zsh
 
 dnf uninstall \
     sddm \
