@@ -16,7 +16,7 @@ dnf install \
     ghostty \
     dms-greeter \
     quickshell-git \
-    dankcalendar \
+    dankcalendar-git \
     dgop \
     dsearch \
     matugen \
