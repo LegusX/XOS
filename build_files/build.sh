@@ -11,7 +11,7 @@ dnf copr enable -y avengemedia/dms
 dnf copr enable -y avengemedia/danklinux
 dnf copr enable -y scottames/ghostty
 
-dnf install \
+dnf install -y \
     dms \
     ghostty \
     dms-greeter \
