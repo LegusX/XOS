@@ -8,10 +8,11 @@ cp -avf "/ctx/system_files"/. /
 ### Install packages
 
 dnf copr enable avengemedia/dms
+dnf copr enable avengemedia/danklinux
+dnf copr enable scottames/ghostty
+
 dnf install \
-    niri \
     dms \
-    xwayland-satellite \
     ghostty \
     dms-greeter \
     quickshell-git \
@@ -19,7 +20,7 @@ dnf install \
     dgop \
     dsearch \
     matugen \
-    qt6-multimedia \
+    qt6-qtmultimedia \
     firefox \
     dolphin \
     greetd \
