@@ -26,6 +26,10 @@ dnf install \
     zsh \
     power-profiles-daemon
 
+dnf uninstall \
+    sddm \
+    waybar \
+
 ### Enable various system units
 systemctl --user add-wants niri.service dms
 systemctl enable greetd.service power-profiles-daemon.service
