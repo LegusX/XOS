@@ -25,7 +25,7 @@ dnf install -y \
     greetd \
     zsh
 
-dnf remove \
+dnf remove -y \
     sddm \
     waybar \
 
