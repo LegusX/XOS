@@ -31,13 +31,12 @@ dnf remove -y \
     waybar \
     sddm
 
-groupadd --root=/ -f audio
-groupadd --root=/ -f video
-groupadd --root=/ -f input
+groupadd -f audio
+groupadd -f video
+groupadd -f input
 
 # Create default account
-useradd --root=/ \
-    --create-home \
+useradd --create-home \
     --home-dir /var/home/logan \
     --groups wheel,greeter,video,audio,input \
     --shell /usr/bin/zsh \
