@@ -31,14 +31,15 @@ dnf remove -y \
     waybar \
     sddm
 
-groupadd -f audio
-groupadd -f video
-groupadd -f input
+# groupadd -f audio
+# groupadd -f video
+# groupadd -f input
 
 # Create default account
 useradd --create-home \
     --home-dir /var/home/logan \
-    --groups wheel,greeter,video,audio,input \
+    --groups wheel,greeter \ 
+    #,video,audio,input \
     --shell /usr/bin/zsh \
     logan
 
