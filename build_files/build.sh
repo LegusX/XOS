@@ -23,7 +23,8 @@ dnf install -y \
     qt6-qtmultimedia \
     dolphin \
     greetd \
-    zsh
+    zsh \
+    niri
 
 dnf remove -y \
     sddm \
