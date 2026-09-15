@@ -31,6 +31,10 @@ dnf remove -y \
     waybar \
     sddm
 
+groupadd --root=/ audio
+groupadd --root=/ video
+groupadd --root=/ input
+
 # Create default account
 useradd --root=/ \
     --create-home \
