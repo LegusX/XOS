@@ -38,8 +38,7 @@ dnf remove -y \
 # Create default account
 useradd --create-home \
     --home-dir /var/home/logan \
-    --groups wheel,greeter \ 
-    #,video,audio,input \
+    --groups wheel,greeter \
     --shell /usr/bin/zsh \
     logan
 
