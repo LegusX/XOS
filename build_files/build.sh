@@ -7,6 +7,12 @@ cp -avf "/ctx/system_files"/. /
 
 ### Install packages
 
+# VS Code
+rpm --import https://packages.microsoft.com/keys/microsoft.asc &&
+echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\nautorefresh=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
+
+dnf config-manager addrepo --from-repofile=https://download.opensuse.org/repositories/home:TheLocehiliosan:yadm/Fedora_Rawhide/home:TheLocehiliosan:yadm.repo
+
 dnf copr enable -y avengemedia/dms
 dnf copr enable -y avengemedia/danklinux
 dnf copr enable -y scottames/ghostty
@@ -21,15 +27,21 @@ dnf install -y \
     dsearch \
     matugen \
     qt6-qtmultimedia \
-    dolphin \
+    nautilus \
     greetd \
     zsh \
     niri \
-    firefox
+    firefox \
+    yadm \
+    code \
+    helix \
+    adw-gtk3-theme
 
 dnf remove -y \
     waybar \
-    sddm
+    sddm \
+    rofi \
+    pipewire-config-raop
 
 # groupadd -f audio
 # groupadd -f video
@@ -43,11 +55,11 @@ useradd --create-home \
     logan
 
 # Set up DMS for the default user's systemd session
-mkdir -p /var/home/logan/.config/systemd/user/niri.service.wants
+mkdir -p /usr/lib/systemd/user/niri.service.wants
 
 ln -sf \
-    /var/home/logan/.config/systemd/user/dms.service \
-    /var/home/logan/.config/systemd/user/niri.service.wants/dms.service
+    /usr/lib/systemd/user/dms.service \
+    /usr/lib/systemd/user/niri.service.wants/dms.service
 
 chown -R logan:logan /var/home/logan/.config
 
