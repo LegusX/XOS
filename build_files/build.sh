@@ -16,6 +16,7 @@ dnf config-manager addrepo --from-repofile=https://download.opensuse.org/reposit
 dnf copr enable -y avengemedia/dms
 dnf copr enable -y avengemedia/danklinux
 dnf copr enable -y scottames/ghostty
+dnf copr enable -y scottames/awww
 
 dnf install -y \
     dms \
@@ -36,7 +37,6 @@ dnf install -y \
     code \
     helix \
     adw-gtk3-theme \
-    spotify \
     awww
 
 dnf remove -y \
