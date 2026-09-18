@@ -35,7 +35,9 @@ dnf install -y \
     yadm \
     code \
     helix \
-    adw-gtk3-theme
+    adw-gtk3-theme \
+    spotify \
+    awww
 
 dnf remove -y \
     waybar \
