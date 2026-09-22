@@ -17,6 +17,9 @@ dnf copr enable -y avengemedia/dms
 dnf copr enable -y avengemedia/danklinux
 dnf copr enable -y scottames/ghostty
 dnf copr enable -y scottames/awww
+dnf copr enable sqlazer/godot-dotnet
+
+dnf install -y --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release terra-gpg-keys
 
 dnf install -y \
     dms \
@@ -37,7 +40,13 @@ dnf install -y \
     code \
     helix \
     adw-gtk3-theme \
-    awww
+    awww \
+    powerline-fonts \
+    dotnet-sdk-10.0 \
+    kf6-kimageformats \
+    gnome-keyring \
+    vesktop
+
 
 dnf remove -y \
     waybar \
