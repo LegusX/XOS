@@ -18,9 +18,9 @@ dnf copr enable -y avengemedia/danklinux
 dnf copr enable -y scottames/ghostty
 dnf copr enable -y scottames/awww
 
-# dnf install -y --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release terra-gpg-keys
+dnf install -y --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release terra-gpg-keys
 
-dnf install -y \
+dnf install -y --skip-unavailable \
     dms \
     ghostty \
     dms-greeter \
