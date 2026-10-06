@@ -45,8 +45,7 @@ dnf install -y --skip-unavailable \
     kf6-kimageformats \
     gnome-keyring \
     vesktop \
-    dotnet-sdk-10.0 \
-    steam
+    dotnet-sdk-10.0 
 
 
 dnf remove -y \
