@@ -46,7 +46,8 @@ dnf install -y --skip-unavailable \
     kf6-kimageformats \
     gnome-keyring \
     vesktop \
-    dotnet-sdk-10.0 
+    dotnet-sdk-10.0 \
+    tailscale
 
 
 dnf remove -y \
