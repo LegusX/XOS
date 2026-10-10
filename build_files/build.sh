@@ -12,11 +12,13 @@ rpm --import https://packages.microsoft.com/keys/microsoft.asc &&
 echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\nautorefresh=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
 
 dnf config-manager addrepo --from-repofile=https://download.opensuse.org/repositories/home:TheLocehiliosan:yadm/Fedora_Rawhide/home:TheLocehiliosan:yadm.repo
+dnf config-manager setopt google-chrome.enabled=1
 
 dnf copr enable -y avengemedia/dms
 dnf copr enable -y avengemedia/danklinux
 dnf copr enable -y scottames/ghostty
 dnf copr enable -y scottames/awww
+
 
 dnf install -y --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release terra-gpg-keys
 
@@ -45,7 +47,8 @@ dnf install -y --skip-unavailable \
     kf6-kimageformats \
     gnome-keyring \
     vesktop \
-    dotnet-sdk-10.0 
+    dotnet-sdk-10.0 \
+    google-chrome-stable
 
 
 dnf remove -y \
