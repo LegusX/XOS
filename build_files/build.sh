@@ -22,15 +22,8 @@ dnf copr enable -y scottames/awww
 dnf install -y --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release terra-gpg-keys
 
 dnf install -y --skip-unavailable \
-    dms \
     ghostty \
-    dms-greeter \
-    quickshell-git \
-    dankcalendar-git \
-    dgop \
-    dsearch \
     matugen \
-    qt6-qtmultimedia \
     nautilus \
     greetd \
     zsh \
@@ -45,10 +38,9 @@ dnf install -y --skip-unavailable \
     dotnet-sdk-10.0 \
     kf6-kimageformats \
     gnome-keyring \
-    vesktop \
-    dotnet-sdk-10.0 \
-    tailscale
-
+    tailscale \
+    noctalia \
+    noctalia-greeter
 
 dnf remove -y \
     waybar \

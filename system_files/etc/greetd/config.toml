@@ -3,6 +3,5 @@
 vt = 1
 
 [default_session]
-# Launch dank-greeter using a minimal Wayland compositor wrapper (niri or cage)
-command = "niri --kiosk -- dank-greeter"
+command = "/usr/bin/noctalia-greeter-session"
 user = "greeter"
