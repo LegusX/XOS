@@ -40,7 +40,8 @@ dnf install -y --skip-unavailable \
     gnome-keyring \
     tailscale \
     noctalia \
-    noctalia-greeter
+    noctalia-greeter \
+    greetd
 
 dnf remove -y \
     waybar \
@@ -51,6 +52,7 @@ dnf remove -y \
 # groupadd -f audio
 # groupadd -f video
 # groupadd -f input
+groupadd -f greeter
 
 # Create default account
 useradd --create-home \
